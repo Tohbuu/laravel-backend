@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'socket' => [
+        'enabled' => env('SOCKET_ENABLED', false),
+        'url' => env('SOCKET_URL', 'http://localhost:3001'),
+    ],
+
 ];

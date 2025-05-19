@@ -29,13 +29,9 @@ return [
     */
 
     'disks' => [
-
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app/private'),
-            'serve' => true,
-            'throw' => false,
-            'report' => false,
+            'root' => storage_path('app'),
         ],
 
         'public' => [
@@ -45,6 +41,13 @@ return [
             'visibility' => 'public',
             'throw' => false,
             'report' => false,
+        ],
+
+        'portfolio_backgrounds' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/portfolio_backgrounds'),
+            'url' => env('APP_URL').'/storage/portfolio_backgrounds',
+            'visibility' => 'public',
         ],
 
         's3' => [
@@ -59,7 +62,6 @@ return [
             'throw' => false,
             'report' => false,
         ],
-
     ],
 
     /*
